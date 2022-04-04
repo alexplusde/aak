@@ -102,11 +102,11 @@ do
 
 done
 
-# alexplus_de
-read -p "Load alexplus_de addons [yrewrite_metainfo speed_up events qanda be_style_fluent collect epcqrcode]:" repos
+# alexplusde
+read -p "Load alexplusde addons [yrewrite_metainfo speed_up qanda be_style_fluent collect epcqrcode]:" repos
 
 if [ -z "$repos" ]; then
-    repos=("yrewrite_metainfo" "speed_up" "events" "neues" "qanda" "be_style_fluent" "collect" "epcqrcode")
+    repos=("yrewrite_metainfo" "speed_up" "qanda" "be_style_fluent" "collect" "epcqrcode")
 fi
 
 for repo in ${repos[@]}
