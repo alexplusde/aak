@@ -103,7 +103,7 @@ do
 done
 
 # alexplus_de
-read -p "Load alexplus_de addons [yrewrite_metainfo speed_up events neues qanda be_style_fluent collect epcqrcode]:" repos
+read -p "Load alexplus_de addons [yrewrite_metainfo speed_up events qanda be_style_fluent collect epcqrcode]:" repos
 
 if [ -z "$repos" ]; then
     repos=("yrewrite_metainfo" "speed_up" "events" "neues" "qanda" "be_style_fluent" "collect" "epcqrcode")
@@ -112,7 +112,7 @@ fi
 for repo in ${repos[@]}
 do
     set -e
-    curl -Ls -o ./tmp/${repo}_repo.json https://api.github.com/repos/alexplus_de/${repo}/releases/latest
+    curl -Ls -o ./tmp/${repo}_repo.json https://api.github.com/repos/alexplusde/${repo}/releases/latest
     zipball_url=`php -r "echo json_decode(file_get_contents('./tmp/${repo}_repo.json'))->zipball_url;"`
     curl -Ls -o ./tmp/${repo}.zip ${zipball_url}
     unzip -oq ./tmp/${repo}.zip -d ./tmp
