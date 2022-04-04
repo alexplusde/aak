@@ -82,11 +82,11 @@ Load REDAXO AddOns
 - - - - - - - - - - - -
 ${CNO}"
 
-# structure_tweaks
-read -p "Load FriendsOfREDAXO addons [adminer bloecks developer focuspoint mblock quick_navigation redactor2]:" repos
+# FOR
+read -p "Load FriendsOfREDAXO addons [accessdenied yform_spam_protection global_settings yform_usability maintenance consent_manager project_manager adminer bloecks developer focuspoint mblock quick_navigation redactor uploader]:" repos
 
 if [ -z "$repos" ]; then
-    repos=("adminer" "bloecks" "developer" "focuspoint" "mblock" "quick_navigation" "redactor2")
+    repos=("accessdenied" "yform_spam_protection" "global_settings" "yform_usability" "maintenance" "consent_manager" "project_manager" "adminer" "bloecks" "developer" "focuspoint" "mblock" "quick_navigation" "redactor" "uploader")
 fi
 
 for repo in ${repos[@]}
@@ -102,26 +102,46 @@ do
 
 done
 
+# alexplus_de
+read -p "Load alexplus_de addons [yrewrite_metainfo speed_up events neues qanda be_style_fluent collect epcqrcode]:" repos
+
+if [ -z "$repos" ]; then
+    repos=("yrewrite_metainfo" "speed_up" "events" "neues" "qanda" "be_style_fluent" "collect" "epcqrcode")
+fi
+
+for repo in ${repos[@]}
+do
+    set -e
+    curl -Ls -o ./tmp/${repo}_repo.json https://api.github.com/repos/alexplus_de/${repo}/releases/latest
+    zipball_url=`php -r "echo json_decode(file_get_contents('./tmp/${repo}_repo.json'))->zipball_url;"`
+    curl -Ls -o ./tmp/${repo}.zip ${zipball_url}
+    unzip -oq ./tmp/${repo}.zip -d ./tmp
+    mv ./tmp/*${repo}*/ ./src/addons/${repo}/;
+
+    echo -e "${CGREEN}${repo}${CNO} was successful loaded and unzipped into the addon folder"
+
+done
 
 
-#read -p "Load Yakamara addons [redaxo_yform redaxo_yrewrite ydeploy]:" repos
-#
-#if [ -z "$repos" ]; then
-#    repos=("redaxo_yform" "redaxo_yrewrite" "ydeploy")
-#fi
-#
-#for repo in ${repos[@]}
-#do
-#    set -e
-#    curl -Ls -o ./tmp/${repo}_repo.json https://api.github.com/repos/yakamara/${repo}/releases/latest
-#    zipball_url=`php -r "echo json_decode(file_get_contents('./tmp/${repo}_repo.json'))->zipball_url;"`
-#    curl -Ls -o ./tmp/${repo}.zip ${zipball_url}
-#    unzip -oq ./tmp/${repo}.zip -d ./tmp
-#    mv ./tmp/*${repo}*/ ./src/addons/${repo}/;
-#
-#    echo -e "${CGREEN}${repo}${CNO} was successful loaded and unzipped into the addon folder"
-#
-#done
+
+read -p "Load Yakamara addons [redaxo_yform redaxo_yrewrite ydeploy]:" repos
+
+if [ -z "$repos" ]; then
+    repos=("redaxo_yform" "redaxo_yrewrite" "ydeploy")
+fi
+
+for repo in ${repos[@]}
+do
+    set -e
+    curl -Ls -o ./tmp/${repo}_repo.json https://api.github.com/repos/yakamara/${repo}/releases/latest
+    zipball_url=`php -r "echo json_decode(file_get_contents('./tmp/${repo}_repo.json'))->zipball_url;"`
+    curl -Ls -o ./tmp/${repo}.zip ${zipball_url}
+    unzip -oq ./tmp/${repo}.zip -d ./tmp
+    mv ./tmp/*${repo}*/ ./src/addons/${repo}/;
+
+    echo -e "${CGREEN}${repo}${CNO} was successful loaded and unzipped into the addon folder"
+
+done
 
 
 
