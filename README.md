@@ -1,4 +1,6 @@
-# Yak
+# Aak
+
+Basierend auf YAK, aber mit alexplus' Lieblings-Addons
 
 - [Allgemeines Arbeiten](#anker-allgemeines-arbeiten)
 - [Bekannte Probleme](#anker-bekannte-probleme)
