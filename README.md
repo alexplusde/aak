@@ -1,17 +1,14 @@
 # aak - yak mit Anpassungen an alex+ Digitales Marketing
 
-Für die, die ganz frisch auf einem lokalen Rechner starten, ist hier eine [Anleitung](https://getgrav.org/blog/macos-sonoma-apache-multiple-php-versions) um ein Apache Setup mit mehreren PHP-Versionen aufzusetzen, eine Umgebung mit MySQL, virtuellen Hosts, APC-Caching, YAML und Xdebug einzurichten sowie SSL für virtuelle Apache-Hosts. 
-Diese Anleitung richtet sich an erfahrene Webentwickler. Wenn man Anfänger ist, ist man mit MAMP oder MAMP Pro besser bedient.
-
-Ansonsten wird 
+Voraussetzungen: 
+- Laragon / WAMP / MAMP installieren und konfigurieren - Ein Projekt anlegen, z.B. `mein-projekt.test`.
 - eine `bash` benötigt und
 - [`yarn`](https://yarnpkg.com) sollte installiert sein
 
 ### Installation
 
-1. Laragon / WAMP / MAMP installieren und konfigurieren.
-2. Dieses Repository-Template in ein neues Repository kopieren.
-3. REDAXO wird mit Ausführung des nächsten Befehls automatisch installiert und eine vorhandene Instanz wird überschrieben.
+1. Dieses Repository-Template in ein neues Repository kopieren.
+2. REDAXO wird mit Ausführung des nächsten Befehls automatisch installiert und eine vorhandene Instanz wird überschrieben.
 
     ```
     $ php setup/presetup.php
@@ -53,19 +50,18 @@ Ansonsten wird
     - webpack.config.js
     ```
    
-1. Datei `.env` kopieren und als `.env.local` auf selbige Ebene speichern. Die Datei `.env.local` öffnen und wie folgt anpassen
+3. Datei `.env` kopieren und als `.env.local` auf selbige Ebene speichern. Die Datei `.env.local` öffnen und wie folgt anpassen
     ```
     APP_HOST=project-name.test
     APP_ENV=dev
     ```
-1. Im Anschluss `yarn` ausführen
+4. Im Anschluss `yarn` ausführen
 
-1. Browser öffnen und Redaxo Setup via https://project-name.test/redaxo starten
+5. Browser öffnen und Redaxo Setup via https://project-name.test/redaxo starten
 
 ## Nach dem Setup
 
 1. `developer` AddOn installieren und [Einstellungen](#einstellungen-developer-addon) für die lokale Instanz vornehmen. Die Einstellungen für die Live-Instanz können erst nach dem ersten deployen vorgenommen werden.
-
 2. `ydeploy` AddOn installieren
 
 ### Einstellungen Developer AddOn
