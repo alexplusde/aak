@@ -7,47 +7,11 @@ Voraussetzungen:
 
 ### Installation
 
-1. Dieses Repository-Template in ein neues Repository kopieren.
-2. REDAXO wird mit Ausführung des nächsten Befehls automatisch installiert und eine vorhandene Instanz wird überschrieben.
+1. Dieses Repository-Template in ein neues Repository kopieren über <https://github.com/new?template_name=aak&template_owner=alexplusde>
+2. REDAXO wird mit Ausführung des nächsten Befehls automatisch installiert - eine vorhandene Instanz würde überschrieben.
 
     ```
     $ php setup/presetup.php
-    ```
-
-    **Nach dem presetup sollte die neue Redaxo Struktur wie folgt aussehen**
-
-    ```
-    - /assets/
-        - fonts/
-        - images/
-        - scripts/
-        - styles/
-        - svgs/
-    - /bin/
-    - /public/
-        - assets/
-            - addons/
-            - core/
-        - media/
-        - redaxo/
-    - /src/
-        - addons/
-        - core/
-        - module/
-        - templates/
-        - AppPathProvider.php
-    - /var/
-        - cache/
-        - data/
-        - log/
-    - .env
-    - .gitignore
-    - deploy.php
-    - LICENSE
-    - package.json
-    - postcss.config.js
-    - README.md
-    - webpack.config.js
     ```
    
 3. Datei `.env` kopieren und als `.env.local` auf selbige Ebene speichern. Die Datei `.env.local` öffnen und wie folgt anpassen
@@ -57,14 +21,15 @@ Voraussetzungen:
     ```
 4. Im Anschluss `yarn` ausführen
 
-5. Browser öffnen und Redaxo Setup via https://project-name.test/redaxo starten
+5. Browser öffnen und Redaxo Setup via https://project-name.test/redaxo starten - oder in der Console fortfahren mit `php bin/console setup:run`.
 
 ## Nach dem Setup
 
 1. `developer` AddOn installieren und [Einstellungen](#einstellungen-developer-addon) für die lokale Instanz vornehmen. Die Einstellungen für die Live-Instanz können erst nach dem ersten deployen vorgenommen werden.
-2. `ydeploy` AddOn installieren
+2. Alle weiteren gewünschten Add-ons installieren und konfigurieren.
+3. `ydeploy` AddOn installieren
 
-### Einstellungen Developer AddOn
+### Einstellungen des Developer-Add-ons
 
 #### Lokal
 
