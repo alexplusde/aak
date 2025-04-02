@@ -105,7 +105,7 @@ Das Skript in die `boot.php`des `project` AddOns der **lokalen Instanz** einfüg
 // - - - - - - - - - - - - - - - - - - - - - - - - - -
 if (\rex::isBackend() && \rex_addon::get('ydeploy')->isAvailable()) {
 
-    rex_extension::register('PACKAGES_INCLUDED', function () {
+    \rex_extension::register('PACKAGES_INCLUDED', function () {
         $config = \rex_addon::get('ydeploy')->getProperty('config');
 
         // zusätzliche Tabellen synchronisieren
