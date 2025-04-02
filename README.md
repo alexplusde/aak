@@ -23,6 +23,38 @@ Voraussetzungen:
 
 5. Browser öffnen und Redaxo Setup via https://project-name.test/redaxo starten - oder in der Console fortfahren mit `php bin/console setup:run`.
 
+6. Add-ons installieren - warum nicht über die Konsole? :)
+   ```
+   # Security First
+    php bin/console package:install adminer;
+    php bin/console package:install maintenance;
+    php bin/console package:install accessdenied;
+    
+    # Development Stuff
+    php bin/console package:install developer;
+    php bin/console package:install ymca;
+    
+    # YForm Next
+    php bin/console package:install phpmailer;
+    php bin/console package:install yform;
+    php bin/console package:install yform_field;
+    php bin/console package:install yform_spam_protection;
+    php bin/console package:install yrewrite;
+    php bin/console package:install cronjob;
+    php bin/console package:install sprog;
+    
+    # Structure & Content
+    php bin/console package:install redactor;
+    php bin/console package:install bloecks;
+    php bin/console package:install mform;
+    php bin/console package:install mblock;
+    php bin/console package:install ydeploy;
+    php bin/console package:install ydeploy_export;
+    php bin/console package:install uploader;
+    php bin/console package:install quick_navigation;
+    php bin/console package:install wenns_sein_muss;
+    ```
+
 ## Nach dem Setup
 
 1. `developer` AddOn installieren und [Einstellungen](#einstellungen-developer-addon) für die lokale Instanz vornehmen. Die Einstellungen für die Live-Instanz können erst nach dem ersten deployen vorgenommen werden.
