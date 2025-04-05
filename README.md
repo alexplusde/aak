@@ -1,9 +1,18 @@
 # aak - yak mit Anpassungen an alex+ Digitales Marketing
 
-Voraussetzungen: 
+## Voraussetzungen 
 - Laragon / WAMP / MAMP installieren und konfigurieren - Ein Projekt anlegen, z.B. `mein-projekt.test`.
 - eine `bash` benötigt und
 - [`yarn`](https://yarnpkg.com) sollte installiert sein
+
+## Yarn und Webpack kurz erklärt
+
+| Yarn	                          | Webpack                              |                                 
+|---------------------------------|--------------------------------------|
+| Paketmanager                    | Build-Tool/Modul-Bundler
+| Installiert Abhängigkeiten	  | Verarbeitet Source-Code
+| Führt definierte Skripte aus    | Bündelt und optimiert Assets
+| Verwaltet node_modules	      | Erzeugt die fertigen Frontend-Assets
 
 ### Installation
 
