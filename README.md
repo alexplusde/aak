@@ -48,6 +48,7 @@
     php bin/console package:install adminer;
     php bin/console package:install maintenance;
     php bin/console package:install accessdenied;
+    php bin/console package:install 2factor_auth
 
     # Development Stuff
     php bin/console package:install developer;
@@ -63,6 +64,10 @@
     php bin/console package:install uploader;
     php bin/console package:install quick_navigation;
     php bin/console package:install wenns_sein_muss;
+
+    # Konfiguration
+    php bin/console 2factor_auth:enforce --all
+    php bin/console maintenance:mode on 
     ```
 
 ## Nach dem Setup
