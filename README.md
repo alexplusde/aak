@@ -84,6 +84,11 @@
    # Konfiguration
    php bin/console 2factor_auth:enforce --all
    php bin/console maintenance:mode on
+
+   php bin/console config:set -t bool debug.enabled true
+   php bin/console config:set -t bool debug.throw_always_exception true
+   php bin/console config:set -t int password_policy.length.min 24
+   # php bin/console config:set -t bool use_hsts true
    ```
 
 ## Nach dem Setup
