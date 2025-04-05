@@ -34,16 +34,8 @@
 
 6. Add-ons installieren - warum nicht über die Konsole? :)
    ```
-   # Security First
-    php bin/console package:install adminer;
-    php bin/console package:install maintenance;
-    php bin/console package:install accessdenied;
-    
-    # Development Stuff
-    php bin/console package:install developer;
-    php bin/console package:install ymca;
-    
-    # YForm Next
+      
+    # Basics
     php bin/console package:install phpmailer;
     php bin/console package:install yform;
     php bin/console package:install yform_field;
@@ -51,7 +43,16 @@
     php bin/console package:install yrewrite;
     php bin/console package:install cronjob;
     php bin/console package:install sprog;
-    
+
+   # Security Stuff
+    php bin/console package:install adminer;
+    php bin/console package:install maintenance;
+    php bin/console package:install accessdenied;
+
+    # Development Stuff
+    php bin/console package:install developer;
+    php bin/console package:install ymca;
+
     # Structure & Content
     php bin/console package:install redactor;
     php bin/console package:install bloecks;
