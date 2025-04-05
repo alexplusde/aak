@@ -34,58 +34,57 @@
 
 6. Add-ons installieren - warum nicht über die Konsole? :)
    ```
-      
-    # Basics
-    php bin/console package:install phpmailer
-    php bin/console package:install yform
-    php bin/console package:install yform_field
-    php bin/console package:install yform_spam_protection
-    pho bin/console package:install yform_geo_osm
-    php bin/console package:install yrewrite
-    php bin/console package:install yrewrite_metainfo
-    php bin/console package:install cronjob
-    php bin/console package:install sprog
-    php bin/console package:install url
+   # Basics
+   php bin/console package:install phpmailer
+   php bin/console package:install yform
+   php bin/console package:install yform_field
+   php bin/console package:install yform_spam_protection
+   pho bin/console package:install yform_geo_osm
+   php bin/console package:install yrewrite
+   php bin/console package:install yrewrite_metainfo
+   php bin/console package:install cronjob
+   php bin/console package:install sprog
+   php bin/console package:install url
 
    # Security Stuff
-    php bin/console package:install adminer
-    php bin/console package:install auto_delete
-    php bin/console package:install maintenance
-    php bin/console package:install accessdenied
-    php bin/console package:install 2factor_auth
-    php bin/console package:install wenns_sein_muss
+   php bin/console package:install adminer
+   php bin/console package:install auto_delete
+   php bin/console package:install maintenance
+   php bin/console package:install accessdenied
+   php bin/console package:install 2factor_auth
+   php bin/console package:install wenns_sein_muss
 
-    # Development Stuff
-    php bin/console package:install debug
-    php bin/console package:install developer
-    php bin/console package:install ymca
+   # Development Stuff
+   php bin/console package:install debug
+   php bin/console package:install developer
+   php bin/console package:install ymca
+   
+   # Structure & Content
+   php bin/console package:install redactor
+   php bin/console package:install bloecks
+   php bin/console package:install mform
+   php bin/console package:install mblock
+   php bin/console package:install ydeploy
+   php bin/console package:install ydeploy_export
+   php bin/console package:install uploader
+   php bin/console package:install quick_navigation
+   
+   # best of alexplusde Addons
+   php bin/console package:install media_manager_responsive
+   php bin/console package:install neues
+   php bin/console package:install events
+   php bin/console package:install qanda
+   php bin/console package:install staff
+   
+   # Legacy Plugins
+   php bin/console package:install be_style/customizer
+   php bin/console package:install bloecks/cutncopy
+   php bin/console package:install cronjob/article_status
 
-    # Structure & Content
-    php bin/console package:install redactor
-    php bin/console package:install bloecks
-    php bin/console package:install mform
-    php bin/console package:install mblock
-    php bin/console package:install ydeploy
-    php bin/console package:install ydeploy_export
-    php bin/console package:install uploader
-    php bin/console package:install quick_navigation
-
-    # best of alexplusde Addons
-    php bin/console package:install media_manager_responsive
-    php bin/console package:install neues
-    php bin/console package:install events
-    php bin/console package:install qanda
-    php bin/console package:install staff
-
-    # Legacy Plugins
-    php bin/console package:install be_style/customizer
-    php bin/console package:install bloecks/cutncopy
-    php bin/console package:install cronjob/article_status
-
-    # Konfiguration
-    php bin/console 2factor_auth:enforce --all
-    php bin/console maintenance:mode on
-    ```
+   # Konfiguration
+   php bin/console 2factor_auth:enforce --all
+   php bin/console maintenance:mode on
+   ```
 
 ## Nach dem Setup
 
