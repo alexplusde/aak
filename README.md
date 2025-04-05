@@ -89,6 +89,9 @@
    php bin/console config:set -t bool debug.throw_always_exception true
    php bin/console config:set -t int password_policy.length.min 24
    # php bin/console config:set -t bool use_hsts true
+
+   php bin/console config:set editor vscode
+   php bin/console config:set editor_basepath "C:\laragon\www"
    ```
 
 ## Nach dem Setup
